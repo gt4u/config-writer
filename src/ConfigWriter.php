@@ -34,8 +34,8 @@ class ConfigWriter
     /**
      * @param $key
      * @param $value
+     * @return mixed
      * @throws ExceptionInterface
-     * @throws FileExistsException
      */
     public function write($key, $value)
     {
@@ -43,7 +43,8 @@ class ConfigWriter
         $configFileName = self::getConfigFileName($key);
         $configFileContent = $this->getConfigFileContent($this->configInstance->get($configFileName));
         $configFilePath = $configFileName . ".php";
-        $this->getFilesystemInstance()->write($configFilePath, $configFileContent);
+        $this->getFilesystemInstance()->put($configFilePath, $configFileContent);
+        return $this->configInstance->get($key);
     }
 
     /**
