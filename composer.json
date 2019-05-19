@@ -1,0 +1,36 @@
+{
+  "name": "jamalosm/config-writer",
+  "type": "library",
+  "description": "Config writer",
+  "keywords": [
+    "config",
+    "edit",
+    "editor",
+    "export",
+    "illuminate",
+    "jamalosm",
+    "b1",
+    "bone",
+    "b-one"
+  ],
+  "homepage": "https://b-one.ru",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jamal Osmanov",
+      "email": "admin@b-one.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "league/flysystem" : "^1.0.8",
+    "symfony/var-exporter": "^4.2",
+    "jamalosm/config": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "BONE\\ConfigWriter\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
